@@ -124,9 +124,13 @@ function Confetti() {
   );
 }
 
-// Helper to convert **bold** markdown to <strong> tags
+// Helper to convert **bold** markdown to <strong> tags and handle paragraphs/line breaks
 function formatBold(text) {
-  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Convert **bold**
+  let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Convert double newlines to paragraphs
+  html = html.split(/\n\n+/).map(paragraph => `<p>${paragraph.replace(/\n/g, '<br/>')}</p>`).join('');
+  return html;
 }
 
 const Proposal = ({ onAccept }) => {
