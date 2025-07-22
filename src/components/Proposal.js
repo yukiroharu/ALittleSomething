@@ -34,34 +34,7 @@ const yesGifUrls = [
   'https://media.tenor.com/04_-QoUryk8AAAAC/emoji-in-love-cute.gif',
 ];
 
-const heartfeltLetter = `To my Kate, Shiori, & Cloi,
-
-Thank you for letting me into your heart.
-Thank you for allowing me to see the sides of you that not everyone gets to see the softest parts, the deepest thoughts, the little things you're scared to say out loud. I know how rare and sacred that is, and I don't take it for granted. Not for a second.
-
-You didn't just give me a space in your life… you gave me comfort, you gave me peace, and you gave me love even in the simplest ways, even when you thought you weren't doing anything special. But you were. You are.
-
-You've made me feel safe in ways I didn't think I'd ever experience. I never thought I could be this open, this honest, this emotionally free with someone. I've always struggled to express myself, to put feelings into words, to show emotions that felt too much but with you, it all came naturally. You gave me a place where I didn't have to hide anything. Where I could just be… me.
-
-I love you for everything you are for being bubbly and hilarious, for being gentle and thoughtful, for being someone who always puts others first even when you're the one who needs care. I love you for the way you care about me reminding me to eat, worrying about my sleep, being there when I spiral or when I shut down. You stayed. You didn't run, even when I wasn't easy to deal with. That means more to me than I can say.
-
-I love you even more when you're vulnerable with me. When you tell me the things you're scared of. When you share your doubts. When you trust me with your truth. Because that's when I see the realest, most beautiful version of you. And I want to keep seeing that every day. I want to keep learning about you, growing with you, laughing with you, even crying with you when life gets heavy.
-
-I promise to cherish you.
-To hold you close, even when we're far apart.
-To make you smile, especially on the days when the world feels too loud or too heavy.
-To fill our days with love and laughter, and with quiet comfort when words fall short.
-I promise to always love every part of you.
-
-But if there's one thing I can't promise… it's that everything will always be okay. I know there may be days when we'll both feel off. When we'll misunderstand each other. That's the part I can't control life will throw things at us we're not ready for. But even in those moments, I promise I won't stop choosing you. I won't stop showing up for you. I won't give up on us.
-
-You are the best thing that's ever happened to me. And I love you more than I could ever explain, more than you probably realize.
-
-Thank you for being mine.
-And I hope, with everything in me, that I can be yours too.
-
-With all my love,
-Yuki`;
+const heartfeltLetter = `To my Kate, Shiori, & Cloi,\n\nThank you for letting me into your heart.\nThank you for allowing me to see the sides of you that not everyone gets to see — **the softest parts, the deepest thoughts, the little things you're scared to say out loud**. I know how **rare** and **sacred** that is, and I don't take it for granted. **Not for a second**.\n\nYou didn't just give me a space in your life… you gave me **comfort**, you gave me **peace**, and you gave me **love** even in the simplest ways, even when you thought you weren't doing anything special. But **you were**. **You are**.\n\nYou've made me feel safe in ways I didn't think I'd ever experience. I never thought I could be this **open**, this **honest**, this **emotionally free** with someone. I've always struggled to express myself, to put feelings into words, to show emotions that felt **too much**—but with you, it all came **naturally**. You gave me a place where I didn't have to hide anything. Where I could just be… **me**.\n\nI love you for everything you are for being **bubbly and hilarious**, for being **gentle and thoughtful**, for being someone who always puts others first even when **you're the one who needs care**. I love you for the way you care about me — **reminding me to eat, worrying about my sleep, being there when I spiral or when I shut down**. **You stayed**. You didn't run, even when I wasn't easy to deal with. That means more to me than I can say.\n\nI love you even more when you're **vulnerable** with me. When you tell me the things you're **scared of**. When you share your **doubts**. When you **trust me with your truth**. Because that's when I see the **realest, most beautiful version of you**. And I want to keep seeing that **every day**. I want to keep **learning** about you, **growing** with you, **laughing** with you, even **crying** with you when life gets heavy.\n\nI promise to **cherish** you.\nTo hold you close, even when we're far apart.\nTo make you smile, especially on the days when the world feels **too loud** or **too heavy**.\nTo fill our days with **love** and **laughter**, and with **quiet comfort** when words fall short.\nI promise to always love **every part of you**.\n\nBut if there's one thing I can't promise… it's that everything will always be okay. I know there may be days when we'll both feel off. When we'll **misunderstand** each other. That's the part I can't control—life will throw things at us we're not ready for. But even in those moments, I promise I won't stop **choosing** you. I won't stop **showing up** for you. I won't **give up** on us.\n\n**You are the best thing that's ever happened to me**. And I love you more than I could ever explain, **more than you probably realize**.\n\nThank you for being mine.\nAnd I hope, with everything in me, that I can be **yours too**.\n\nWith all my love,\nYuki`;
 
 function Confetti() {
   // Enhanced confetti animation with better styling
