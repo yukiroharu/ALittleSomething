@@ -34,7 +34,7 @@ const yesGifUrls = [
   'https://media.tenor.com/04_-QoUryk8AAAAC/emoji-in-love-cute.gif',
 ];
 
-const heartfeltLetter = `To my Kate, Shiori, & Cloi,
+const heartfeltLetter = `To my **Kate**, **Shiori**, & **Cloi**,
 
 Thank you for letting me into your heart.
 Thank you for allowing me to see the sides of you that not everyone gets to see — **the softest parts, the deepest thoughts, the little things you're scared to say out loud**. I know how **rare** and **sacred** that is, and I don't take it for granted. **Not for a second**.
@@ -61,7 +61,7 @@ Thank you for being mine.
 And I hope, with everything in me, that I can be **yours too**.
 
 With all my love,
-Yuki`;
+**Yuki**`;
 
 function Confetti() {
   // Enhanced confetti animation with better styling
