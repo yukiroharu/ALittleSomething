@@ -124,6 +124,11 @@ function Confetti() {
   );
 }
 
+// Helper to convert **bold** markdown to <strong> tags
+function formatBold(text) {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
+
 const Proposal = ({ onAccept }) => {
   const [noIndex, setNoIndex] = useState(0);
   const [noPos, setNoPos] = useState({ top: '0', left: '60%' });
@@ -149,6 +154,15 @@ const Proposal = ({ onAccept }) => {
     'https://www.icegif.com/wp-content/uploads/2024/04/i-love-you-icegif-10.gif',
     'https://media1.tenor.com/m/LC8DerXHnzEAAAAC/i-love-you.gif',
   ];
+
+  // Preload GIFs for instant display
+  useEffect(() => {
+    const allGifUrls = [...gifUrls, ...yesGifUrls, ...transitionGifUrls];
+    allGifUrls.forEach(url => {
+      const img = new window.Image();
+      img.src = url;
+    });
+  }, []);
 
   // Helper: get random position (top, bottom, left, right, not center)
   function getRandomGifPosition() {
@@ -685,13 +699,12 @@ const Proposal = ({ onAccept }) => {
             color: '#1e293b',
             textAlign: 'left',
             lineHeight: 1.8,
-            whiteSpace: 'pre-line',
             marginBottom: 40,
             maxHeight: '60vh',
             overflowY: 'auto',
             border: '1px solid rgba(123, 31, 162, 0.1)',
           }}>
-            {heartfeltLetter}
+            <span dangerouslySetInnerHTML={{ __html: formatBold(heartfeltLetter) }} />
           </div>
           <button
             style={{

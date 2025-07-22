@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 
 const messages = [
   {
-    text: `This small book, though perhaps unconventional in its form, is a testament to a deep connection. It is an acknowledgment of the journey that has led me to this moment, a journey I now feel compelled to share. This narrative is not for the masses, but for one individual who has, in ways I am still discovering, illuminated parts of my world that were previously in shadow.\n\nTo Kate, this is for you.`,
+    text: `This small book, though perhaps unconventional in its form, is a testament to a deep connection. It is an acknowledgment of the journey that has led me to this moment, a journey I now feel compelled to share. This narrative is not for the masses, but for one individual who has, in ways I am still discovering, illuminated parts of my world that were previously in shadow.\n\nTo Kate, this is for **you**.`,
   },
   {
     text: `We often encounter people and form perceptions based on what we see or what they choose to present. For a long time, I was content with that. I lived, I existed, and if others saw something good in me, I was grateful for their kindness. But deep down, there were layers I never spoke of, parts of my story that remained unwritten, even to myself.\n\n"Honestly, this is not really my branding." Those were the first thoughts that came to mind as I began to put these words together. This is different, something I haven't done before. But it's different because you are different. You are special to me, more than you know. And now, I want to introduce you to the person behind the surface, to the parts of me that have shaped who I am today. This isn't about my name, or my age, or where I live. It's about "knowing someone" in a much deeper sense.`,
@@ -47,6 +47,11 @@ const messages = [
     text: `You're funny and full of life in a way that lights up even my darkest days. You make me laugh with the smallest things, and honestly, I love everything about you, your humor, your weakness, your strength, your softness. I love you more than you know. I love you more than you love me, and that's saying something. You truly are the best thing that's ever happened in my life.\n\nEven when you think you're not doing enough, when you tell me you don't know what to say, or you feel like you're not comforting me the right way, please know that just being you is more than enough. Your presence alone makes everything feel lighter. Your messages, your voice, your simple "how are yous" they ground me, they remind me that I'm not alone. Because you're with me. And knowing that? That's what makes everything feel okay.\n\nSo, thank you for being my safe place, my best friend, and my love. You're everything to me. I never expected that a simple interaction online would turn into something this real, this deep, and this meaningful to me. But here I am, grateful that I saw your name, grateful that you added me, and even more grateful that we've shared all these moments since.\n\nYou've become someone I think about constantly. Someone whose messages I wait for, whose presence I look for, even in the little things. You make me feel seen, understood, and safe to be myself and that's something I've never really had before. I love the way you share your thoughts so freely, and the way you always try to comfort me even when you're unsure how. I admire how selfless you are, even when you shouldn't have to be.\n\nYou've let me into your world, and I've come to love every part of it, even the vulnerable, messy, emotional part. And though I know things won't always be easy or perfect, I want to be someone who chooses you through all of it.`,
   },
 ];
+
+// Helper to convert **bold** markdown to <strong> tags
+function formatBold(text) {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
 
 const MessageBook = ({ onNext }) => {
   const [page, setPage] = useState(0);
@@ -288,22 +293,23 @@ const MessageBook = ({ onNext }) => {
               padding: '20px 0',
               marginBottom: '20px',
             }}>
-              <p style={{
-                fontFamily: 'Inter, sans-serif',
-                fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-                color: '#2c3e50',
-                lineHeight: 1.8,
-                textAlign: 'justify',
-                margin: 0,
-                fontWeight: 400,
-                letterSpacing: '0.01em',
-                whiteSpace: 'pre-line',
-                textJustify: 'inter-word',
-                hyphens: 'auto',
-                wordBreak: 'normal',
-              }}>
-                {messages[page].text}
-              </p>
+              <p
+                style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
+                  color: '#2c3e50',
+                  lineHeight: 1.8,
+                  textAlign: 'justify',
+                  margin: 0,
+                  fontWeight: 400,
+                  letterSpacing: '0.01em',
+                  whiteSpace: 'pre-line',
+                  textJustify: 'inter-word',
+                  hyphens: 'auto',
+                  wordBreak: 'normal',
+                }}
+                dangerouslySetInnerHTML={{ __html: formatBold(messages[page].text) }}
+              />
             </div>
 
             {/* Page footer intentionally left empty to avoid duplicate navigation buttons */}
